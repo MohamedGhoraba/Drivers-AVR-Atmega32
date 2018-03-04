@@ -1,4 +1,4 @@
-### This a repository for peripheral and Module drivers for AVR Atmega32.
+### This a repository for peripheral and Module drivers for AVR Atmega32 implemented by Mohamed Ghoraba.
 
 ### List of drivers:
   1. I2C
