@@ -1,0 +1,38 @@
+00:35:43 **** Incremental Build of configuration Debug for project led ****
+make all 
+Building file: ../I2C.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"I2C.d" -MT"I2C.o" -c -o "I2C.o" "../I2C.c"
+In file included from ../Micro_config.h:13,
+                 from ../I2C.h:11,
+                 from ../I2C.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../I2C.c
+ 
+Building target: led.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,led.map -mmcu=atmega16 -o "led.elf"  ./ADC.o ./EEPROM.o ./I2C.o ./Keypad.o ./LCD.o ./SPI.o ./main.o ./usart.o   
+Finished building target: led.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S led.elf  >"led.lss"
+Finished building: led.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 led.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    7476 bytes (45.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:35:44 Build Finished (took 869ms)
+

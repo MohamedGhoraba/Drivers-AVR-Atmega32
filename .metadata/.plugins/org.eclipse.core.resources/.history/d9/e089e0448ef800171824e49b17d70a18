@@ -1,0 +1,13 @@
+/*
+ * ADC.c
+ *
+ *  Created on: Jan 13, 2018
+ *      Author: Mohamed
+ */
+#include "ADC.h"
+
+void ADC_Init()
+{
+	ADS
+}
+

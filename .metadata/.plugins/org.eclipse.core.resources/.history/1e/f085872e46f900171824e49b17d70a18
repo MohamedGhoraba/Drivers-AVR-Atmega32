@@ -1,0 +1,24 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2018
+ *      Author: Mohamed
+ */
+#include "LCD.h"
+#include "Keypad.h"
+#include "ADC.h"
+#include "SPI.h"
+
+int main(void)
+{
+	SPI_InitMaster();
+	SPI_SendByte('M');
+	while (1)
+	{
+
+
+	}
+	return 0;
+}
+
+

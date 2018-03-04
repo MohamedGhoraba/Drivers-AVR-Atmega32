@@ -1,0 +1,31 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2018
+ *      Author: Mohamed
+ */
+#include "LCD.h"
+#include "Keypad.h"
+#include "ADC.h"
+#include "SPI.h"
+
+int main(void)
+{
+	//uint8 data;
+	SPI_InitSlave();
+	SPI_InitMaster();
+	SPI_SendString("Iam Micro 1");
+	//LCD_Init();
+	//data = SPI_ReceiveByte();
+	//LCD_ClearScreen();
+	//LCD_SendCharacter(data);
+
+	while (1)
+	{
+
+
+	}
+	return 0;
+}
+
+

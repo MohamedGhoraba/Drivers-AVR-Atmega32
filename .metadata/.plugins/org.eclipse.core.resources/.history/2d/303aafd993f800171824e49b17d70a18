@@ -1,0 +1,30 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2018
+ *      Author: Mohamed
+ */
+#include "LCD.h"
+#include "Keypad.h"
+#include "ADC.h"
+int main(void)
+{
+	uint32 data;
+	LCD_Init();
+	ADC_Init();
+	LCD_ClearScreen();
+	LCD_SendString("Temp = ");
+	LCD_GoToRowCol(0,10);
+	LCD_SendCharacter('C');
+	while (1)
+	{
+		data = ADC_read(2);
+		data = (data*5/1023*0.01);
+		LCD_GoToRowCol(0,7);
+		LCD_IntegerToString(data);
+
+	}
+	return 0;
+}
+
+

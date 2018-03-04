@@ -1,0 +1,14 @@
+/*
+ * EEPROM.c
+ *
+ *  Created on: Jan 15, 2018
+ *      Author: Mohamed
+ */
+
+#include "EEPROM.h"
+
+void EEPROM_Init()
+{
+	I2C_Init();
+}
+

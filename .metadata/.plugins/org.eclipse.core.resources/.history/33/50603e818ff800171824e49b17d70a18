@@ -1,0 +1,23 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2018
+ *      Author: Mohamed
+ */
+#include "LCD.h"
+#include "Keypad.h"
+#include "ADC.h"
+int main(void)
+{
+	uint8 data;
+	LCD_Init();
+	ADC_Init();
+	while (1)
+	{
+		data = ADC_read(0);
+		LCD_IntegerToString(data);
+	}
+	return 0;
+}
+
+

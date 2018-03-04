@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="C:\WinAVR-20100110\bin\avarice.exe"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="--dragon --ignore-intr --jtag usb :4242"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc}"/>
+</launchConfiguration>

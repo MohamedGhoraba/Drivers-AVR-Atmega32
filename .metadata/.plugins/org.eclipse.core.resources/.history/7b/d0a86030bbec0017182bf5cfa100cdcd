@@ -1,0 +1,13 @@
+/*
+ * interrupt.h
+ *
+ *  Created on: Dec 29, 2017
+ *      Author: Mohamed
+ */
+
+#ifndef INTERRUPT_H_
+#define INTERRUPT_H_
+
+void INT1_Init();
+
+#endif /* INTERRUPT_H_ */

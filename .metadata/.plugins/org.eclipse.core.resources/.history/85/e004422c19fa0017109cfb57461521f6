@@ -1,0 +1,14 @@
+/*
+ * EEPROM.h
+ *
+ *  Created on: Jan 15, 2018
+ *      Author: Mohamed
+ */
+
+#ifndef EEPROM_H_
+#define EEPROM_H_
+
+#include "I2C.h"
+
+
+#endif /* EEPROM_H_ */

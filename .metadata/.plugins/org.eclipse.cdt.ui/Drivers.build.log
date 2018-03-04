@@ -1,0 +1,38 @@
+14:31:47 **** Incremental Build of configuration Debug for project Drivers ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../Micro_config.h:13,
+                 from ../LCD.h:11,
+                 from ../main.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Drivers.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Drivers.map -mmcu=atmega16 -o "Drivers.elf"  ./ADC.o ./EEPROM.o ./I2C.o ./Keypad.o ./LCD.o ./SPI.o ./main.o ./usart.o   
+Finished building target: Drivers.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Drivers.elf  >"Drivers.lss"
+Finished building: Drivers.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Drivers.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    7476 bytes (45.6% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:31:48 Build Finished (took 927ms)
+

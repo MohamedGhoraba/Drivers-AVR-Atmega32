@@ -1,0 +1,21 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2018
+ *      Author: Mohamed
+ */
+#include "LCD.h"
+#include "Keypad.h"
+int main(void)
+{
+
+	LCD_Init();
+	LCD_IntegerToString(Keypad_GetPressedKey());
+	while (1)
+	{
+
+	}
+	return 0;
+}
+
+

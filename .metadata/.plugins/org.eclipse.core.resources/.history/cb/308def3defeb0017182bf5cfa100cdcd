@@ -1,0 +1,46 @@
+/*
+ * led.c
+ *
+ *  Created on: Dec 28, 2017
+ *      Author: Mohamed
+ */
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main(void){
+
+	DDRC = 0x0f;
+	PORTC = 0x00;
+	unsigned int flag = 0;
+	while(1)
+	{
+		if(flag == 0){
+		if(PINB & (1<<PB0)){
+			_delay_ms(30);
+			if(PINB & (1<<PB0)){
+					PORTC++;
+					flag = 1;
+				}
+			}
+		}
+		else{
+			flag = 0;
+		}
+
+		if(PINB & (1<<PB1)){
+			_delay_ms(30);
+			if(PINB & (1<<PB1)){
+				if(flag == 0){
+				flag = 1;
+				PORTC--;
+				}
+			}
+		}
+		else{
+			flag = 0;
+		}
+	}
+
+	return 0;
+}

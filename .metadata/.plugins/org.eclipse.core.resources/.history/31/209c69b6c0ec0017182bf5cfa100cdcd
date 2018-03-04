@@ -1,0 +1,40 @@
+/*
+ * led.c
+ *
+ *  Created on: Dec 28, 2017
+ *      Author: Mohamed
+ */
+
+
+#include "interrupt.h"
+unsigned char g_Interrupt_flag = 1;
+ISR(INT1_vect){
+	g_Interrupt_flag = 1;
+}
+int main(void){
+	INT1_Init();
+	DDRC = 0xff;
+	PORTC = 0x01;
+	unsigned char Loop_i = 0;
+	while(1)
+	{
+		if(g_Interrupt_flag == 0){
+			_delay_ms(500);
+			PORTC <<= 1;
+			if(PORTC == 0x00){
+				PORTC = 0x01;
+			}
+		}
+		else if(g_Interrupt_flag == 1){
+			for(Loop_i = 0; Loop_i < 5; Loop_i++){
+				PORTC = 0xff;
+				_delay_ms(500);
+				PORTC = 0x00;
+				_delay_ms(500);
+			}
+			g_Interrupt_flag = 0;
+		}
+	}
+
+	return 0;
+}

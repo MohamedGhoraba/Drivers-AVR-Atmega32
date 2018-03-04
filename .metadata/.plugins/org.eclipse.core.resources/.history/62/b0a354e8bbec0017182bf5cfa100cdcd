@@ -1,0 +1,21 @@
+/*
+ * interrupt0.c
+ *
+ *  Created on: Dec 29, 2017
+ *      Author: Mohamed
+ */
+
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+#include "interrupt.h"
+
+void INT1_Init(){
+
+	SREG &= ~(1<<7);
+	DDRD  &= (~(1<<PD3));
+	GICR |= (1<<INT1);
+	MCUCR |= (1<<ISC10) | (1<<ISC11);
+	SREG |= (1<<7);
+
+}
